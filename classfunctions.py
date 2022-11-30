@@ -61,6 +61,14 @@ class GeneralFunction():
             return float(a) ** float(b)
         except (ValueError, TypeError) as error:
             exit(f"{error} in input values")
+            
+    
+    @staticmethod
+    def torque_setting(a, b):
+        try:
+            return float(a) * float(b)
+        except (ValueError, TypeError) as error:
+            exit(f"{error} in input values")
 
             
     @property
@@ -107,3 +115,9 @@ print(mathemat.multiplier(5, 4))
 mathemat.value_a = 6
 mathemat.value_b = 2
 print(mathemat.divider(mathemat.value_a, mathemat.value_b))
+
+# The static method is aother trick to use as a stand alone function or as a class method.
+print(mathemat.torque_setting(mathemat.value_a, mathemat.value_b))
+print(GeneralFunction.torque_setting(7, 7))
+
+# This appears to be an optional alternative, as I see no benefits of problems with either.
