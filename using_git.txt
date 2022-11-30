@@ -1,0 +1,18 @@
+Open a new repository on github. Get its address from there.
+From the directory of the project (local).
+1. Open CLI.
+2. Execute: git init.
+3. Execute: git add the_name_of_files.py
+4. Execute: git status (to see what is happening)
+5. When satisfied, execute: git commit -m "A comment on the upload"
+6. Set the branch with: git branch -M main
+7. Add the repository with: git remote add origin https://github.com/whatevernames.git
+8. To upload: git push -u origin main
+
+To add new files, you need to pull the project.
+1. Add the files as in step 3 above.
+2. Do the commit, with comment, as step 5 above.
+3. Set the required branch, as step 6.
+4. PULL the project with: git pull
+5. Push it as in step 6.
+The new files should go up.
