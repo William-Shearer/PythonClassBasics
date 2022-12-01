@@ -100,9 +100,10 @@ class GeneralFunction():
 # Note that with cls in the function arguments (above), there is
 # no need to supply a parameter for the object, as it should be.
 # If self were used, the function expects an argument, and throws an error.          
-print(GeneralFunction.adder(2, 3))
-print(GeneralFunction.divider(10.5, 10))
-print(GeneralFunction.powerer(6.8, 5.7))
+print("GeneralFunction.adder(2, 3) = ", GeneralFunction.adder(2, 3))
+print("GeneralFunction.divider(10.5, 10) = ", GeneralFunction.divider(10.5, 10))
+print("GeneralFunction.powerer(6.8, 5.7) = ", GeneralFunction.powerer(6.8, 5.7))
+
 
 # Here an instance of GeneralFunction is created, and then the function is
 # used as a method, instead.
@@ -110,14 +111,16 @@ mathemat = GeneralFunction(2, 10)
 
 # The method may then use other methods to define parameters, or
 # accept the arguments directly.
-print(mathemat.adder(mathemat.value_a, mathemat.value_b))
-print(mathemat.multiplier(5, 4))
+print("mathemat.adder(mathemat.value_a, mathemat.value_b) = ", mathemat.adder(mathemat.value_a, mathemat.value_b))
+print("mathemat.multiplier(5, 4) = ", mathemat.multiplier(5, 4))
+
+# Using the property to change values (the correct way to do it.)
 mathemat.value_a = 6
 mathemat.value_b = 2
-print(mathemat.divider(mathemat.value_a, mathemat.value_b))
+print("mathemat.divider(mathemat.value_a, mathemat.value_b) + ", mathemat.divider(mathemat.value_a, mathemat.value_b))
 
 # The static method is aother trick to use as a stand alone function or as a class method.
-print(mathemat.torque_setting(mathemat.value_a, mathemat.value_b))
-print(GeneralFunction.torque_setting(7, 7))
+print("mathemat.torque_setting(mathemat.value_a, mathemat.value_b) = ", mathemat.torque_setting(mathemat.value_a, mathemat.value_b))
+print("GeneralFunction.torque_setting(7, 7) = ",GeneralFunction.torque_setting(7, 7))
 
 # This appears to be an optional alternative, as I see no benefits of problems with either.
