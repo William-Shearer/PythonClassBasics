@@ -64,8 +64,7 @@ if __name__ == "__main__":
     pprint(p3.__dict__)
     print()
     
-    # Copy the __dict__ attribute and access it. Doing this is okay.
-    # You cannot work directly with the __dict__, however. It is reserved for the class inner workings.
+    # Copy the __dict__ attribute and access it.
     p1_dict = p1.__dict__.copy()
     print(f"{p1_dict['_Pilots__name']} {p1_dict['_Pilots__surname']}, License Number: {p1_dict['_Pilots__cert_no']}, with {p1_dict['_Pilots__hours']:,} hours.")
     
